@@ -6,6 +6,8 @@ A vendor-neutral effort to standardize machine-readable operational state for we
 
 **Open Operational State** defines a standard for how web services communicate their operational condition — health, readiness, liveness, status — in a machine-readable, interoperable way.
 
+> The specification is a **complete, testable draft** with normative requirements, locked vocabulary values, JSON serializations, and conformance levels defined.
+
 The effort is built around a six-layer extensible architecture:
 
 1. **Core Model** — stable, transport-agnostic semantics for operational state
