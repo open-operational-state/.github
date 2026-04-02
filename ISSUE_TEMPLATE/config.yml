@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Support
+    url: https://github.com/open-operational-state/.github/blob/main/SUPPORT.md
+    about: Find support channels and resources
+  - name: Security Vulnerability
+    url: https://github.com/open-operational-state/.github/blob/main/SECURITY.md
+    about: Report a security vulnerability (do not open a public issue)
