@@ -4,7 +4,9 @@ A vendor-neutral standard for machine-readable operational state of web services
 
 ---
 
-**Open Operational State** defines how web services communicate their operational condition — health, readiness, liveness, status — in a machine-readable, interoperable way. Instead of requiring systems to change their existing health endpoints, it provides a canonical semantic model that existing formats can be mapped into.
+**Open Operational State** defines how web services communicate their operational condition — health, readiness, liveness, status — in a machine-readable, interoperable way. It enables monitoring systems to interpret health check endpoints, readiness and liveness probes, and service status APIs through a common model — even when they use different formats.
+
+Instead of requiring systems to change their existing endpoints, it provides a canonical semantic model that existing formats can be mapped into through adapters.
 
 > The specification is a **complete, testable draft** with normative requirements, locked vocabulary values, JSON serializations, and conformance levels defined. Feedback is encouraged, especially on vocabulary, semantics, and real-world mapping.
 
@@ -39,6 +41,24 @@ New to the project? Read in this order:
 - Read the [Contributing Guide](https://github.com/open-operational-state/.github/blob/main/CONTRIBUTING.md)
 - Review the [Code of Conduct](https://github.com/open-operational-state/.github/blob/main/CODE_OF_CONDUCT.md)
 - See [Support](https://github.com/open-operational-state/.github/blob/main/SUPPORT.md) for help channels
+
+## FAQ
+
+### Is this a replacement for health check endpoints?
+
+No. Open Operational State does not replace existing health check or status endpoints. It provides a model that can interpret and normalize responses from existing endpoints through adapters.
+
+### Does this replace the IETF health check draft?
+
+No. The project builds on prior work including `draft-inadarei-api-health-check` and `draft-dallariva-web-service-status-json`. It is compatible with both and can normalize responses that follow either format. See [Prior Art](https://github.com/open-operational-state/status-spec/blob/main/PRIOR-ART.md) for details.
+
+### Why not just use one JSON format?
+
+Because existing systems already use different formats. This standard provides a unifying semantic layer that allows them to coexist while being interpretable through a common model.
+
+### Is this related to Kubernetes health checks?
+
+The standard can interpret Kubernetes liveness and readiness probe semantics. The condition vocabulary includes explicit mappings for Kubernetes concepts. However, the standard is not Kubernetes-specific — it applies to any web service.
 
 ## License
 
