@@ -50,7 +50,7 @@ No. Open Operational State does not replace existing health check or status endp
 
 ### Does this replace the IETF health check draft?
 
-No. The project builds on prior work including `draft-inadarei-api-health-check` and `draft-dallariva-web-service-status-json`. It is compatible with both and can normalize responses that follow either format. See [Prior Art](https://github.com/open-operational-state/status-spec/blob/main/PRIOR-ART.md) for details.
+No. The project builds on prior work including the Health Check Response Format for HTTP APIs (`draft-inadarei-api-health-check`) and the Service Status Resource Format for Web Services (`draft-dallariva-web-service-status-json`). It is compatible with both and can normalize responses that follow either format. See [Prior Art](https://github.com/open-operational-state/status-spec/blob/main/PRIOR-ART.md) for details.
 
 ### Why not just use one JSON format?
 
