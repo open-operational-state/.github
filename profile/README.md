@@ -1,14 +1,38 @@
 # Open Operational State
 
-A vendor-neutral standard for machine-readable operational state of web services, enabling consistent interpretation across monitoring systems, platforms, and APIs.
+A vendor-neutral standard for machine-readable operational state of web services.
 
 ---
 
-**Open Operational State** defines how web services communicate their operational condition — health, readiness, liveness, status — in a machine-readable, interoperable way. It enables monitoring systems to interpret health check endpoints, readiness and liveness probes, and service status APIs through a common model — even when they use different formats.
+## The Problem
 
-Instead of requiring systems to change their existing endpoints, it provides a canonical semantic model that existing formats can be mapped into through adapters.
+Every web service exposes health checks differently. Spring Boot returns `{"status": "UP"}`. Kubernetes probes expect a 200. The IETF health check draft uses `{"status": "pass"}`. Your custom endpoint returns `{"healthy": true}`. Monitoring systems, load balancers, and orchestrators all interpret these differently — or don't interpret them at all.
 
-> The specification is a **complete, testable draft** with normative requirements, locked vocabulary values, JSON serializations, and conformance levels defined. Feedback is encouraged, especially on vocabulary, semantics, and real-world mapping.
+There is no common model for what "operational state" means across systems.
+
+## The Solution
+
+**Open Operational State** provides a canonical semantic model that any health check, readiness probe, or status endpoint can be interpreted through — without requiring systems to change their existing endpoints.
+
+```bash
+npm install @open-operational-state/parser @open-operational-state/emitter
+```
+
+```js
+import { parse } from '@open-operational-state/parser';
+
+// Automatically detects Spring Boot, IETF draft, plain HTTP, or native format
+const snapshot = parse( { contentType, body, url, httpStatus } );
+
+console.log( snapshot.condition );  // 'operational' | 'degraded' | 'down'
+console.log( snapshot.profiles );   // ['health']
+```
+
+Or validate a live endpoint from the command line:
+
+```bash
+npx @open-operational-state/validator probe https://your-api.com/health
+```
 
 The standard is built around a six-layer extensible architecture:
 
@@ -33,7 +57,7 @@ New to the project? Read in this order:
 |---|---|
 | [status-spec](https://github.com/open-operational-state/status-spec) | Technical specification — the standard itself |
 | [status-conformance](https://github.com/open-operational-state/status-conformance) | Conformance definitions, fixtures, and test taxonomy |
-| [status-tooling](https://github.com/open-operational-state/status-tooling) | Vendor-neutral reference tooling (coming soon) |
+| [status-tooling](https://github.com/open-operational-state/status-tooling) | Reference implementation — npm packages, CLI, and adapters |
 | [governance](https://github.com/open-operational-state/governance) | Charter, governance model, terminology, roadmap |
 
 ## Get Involved
