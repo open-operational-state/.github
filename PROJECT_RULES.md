@@ -49,7 +49,7 @@ This document is the canonical, org-wide set of constraints for all repositories
 ## Repository Discipline
 
 - Do not create new repositories without explicit approval.
-- The current repository set is: `.github`, `governance`, `status-spec`, `status-conformance`, `status-tooling`.
+- The current repository set is: `.github`, `governance`, `status-spec`, `status-conformance`, `status-tooling-js`.
 - Deferred repositories (e.g., `status-site`, `status-schemas`, `synthetic-protocol`) must not be created prematurely.
 
 ## Standards References

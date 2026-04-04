@@ -30,7 +30,7 @@ Before making changes, please review the [PROJECT_RULES.md](PROJECT_RULES.md) fo
 - Bug fixes and corrections
 - Documentation improvements
 - Test fixtures and conformance contributions
-- Tooling enhancements (in `status-tooling`)
+- Tooling enhancements (in `status-tooling-js`)
 - Proposals for spec changes (via issues and design notes in `status-spec`)
 
 ### What We Do Not Accept Without Prior Discussion
