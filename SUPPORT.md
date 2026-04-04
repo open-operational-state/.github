@@ -29,4 +29,4 @@ For security vulnerabilities, see [SECURITY.md](SECURITY.md). Do not open public
 | [governance](https://github.com/open-operational-state/governance) | Charter, governance model, terminology, roadmap |
 | [status-spec](https://github.com/open-operational-state/status-spec) | Technical specification for operational-state standard |
 | [status-conformance](https://github.com/open-operational-state/status-conformance) | Conformance definitions, fixtures, test taxonomy |
-| [status-tooling](https://github.com/open-operational-state/status-tooling) | Vendor-neutral reference tooling (parsers, validators, etc.) |
+| [status-tooling-js](https://github.com/open-operational-state/status-tooling-js) | Vendor-neutral reference tooling — JavaScript (parsers, validators, etc.) |

@@ -31,7 +31,7 @@ console.log( snapshot.profiles );   // ['health']
 Or validate a live endpoint from the command line:
 
 ```bash
-npx @open-operational-state/validator probe https://your-api.com/health
+npx @open-operational-state/oos probe https://your-api.com/health
 ```
 
 The standard is built around a six-layer extensible architecture:
@@ -57,7 +57,7 @@ New to the project? Read in this order:
 |---|---|
 | [status-spec](https://github.com/open-operational-state/status-spec) | Technical specification — the standard itself |
 | [status-conformance](https://github.com/open-operational-state/status-conformance) | Conformance definitions, fixtures, and test taxonomy |
-| [status-tooling](https://github.com/open-operational-state/status-tooling) | Reference implementation — npm packages, CLI, and adapters |
+| [status-tooling-js](https://github.com/open-operational-state/status-tooling-js) | Reference implementation (JavaScript) — npm packages, CLI, and adapters |
 | [governance](https://github.com/open-operational-state/governance) | Charter, governance model, terminology, roadmap |
 
 ## Get Involved

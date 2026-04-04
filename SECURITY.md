@@ -28,7 +28,7 @@ This policy applies to all repositories under the `open-operational-state` GitHu
 - `governance`
 - `status-spec`
 - `status-conformance`
-- `status-tooling`
+- `status-tooling-js`
 
 ## Disclosure
 
